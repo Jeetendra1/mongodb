@@ -7,11 +7,11 @@ const { Course } = require('../schema/course');
 const insertSingleStudent = async () => {
     try{
         const insertStrudent = new Student({
-            name: 'Mansi',
+            name: 'Shree',
             class: 'MSC',
             email: 'mansi@gmail.com',
             city: 'Satna',
-            mobile: 8839791292,
+            mobile: 8839791192,
             active: true,
             date: '03-04-2023'
         });
@@ -222,10 +222,8 @@ const getStudentByCourse = async () => {
     try {
         const result = await Course.find({_id: '642ac36c7558c082949d679f'})
         .populate('studentid');
-        
-        console.log(result);
     } catch(err) {
         console.log(err);
     }
 }
-getStudentByCourse();
+insertSingleStudent();
